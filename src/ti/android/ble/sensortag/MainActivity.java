@@ -249,7 +249,7 @@ public class MainActivity extends ViewPagerActivity {
 
       switch (connState) {
       case BluetoothGatt.STATE_CONNECTED:
-        mBluetoothLeService.disconnect(null);
+        mBluetoothLeService.disconnect(mBluetoothDevice.getAddress());
         break;
       case BluetoothGatt.STATE_DISCONNECTED:
         boolean ok = mBluetoothLeService.connect(mBluetoothDevice.getAddress());
